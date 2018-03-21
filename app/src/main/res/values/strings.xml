@@ -2,5 +2,7 @@
     <string name="app_name">Supoj Read Code</string>
 
     <string name="login_th">ลงชื่อเข้าใช้งาน</string>
+    <string name="user_name">sombut</string>
+    <string name="Register_ok">ตกลง</string>
 <string name="register">สมัครใช้งาน</string>
 </resources>

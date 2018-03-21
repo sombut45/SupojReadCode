@@ -11,6 +11,8 @@
         android:layout_height="?attr/actionBarSize"/>
 <!--conter-->
     <LinearLayout
+        android:background="#c8ffffff"
+        android:padding="16dp"
         android:layout_margin="50dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -21,20 +23,20 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <!--icon-->
             <ImageView
-                android:layout_gravity="center_verticall"
+                android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_action_name"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <!--Texfiled-->
+            <!--TextField-->
             <EditText
-                android:inputType="text"
+                android:id="@+id/editname"
                 android:hint="Name :"
+                android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
-
         </LinearLayout>
 
         <!--User-->
@@ -42,43 +44,47 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <!--icon-->
             <ImageView
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_action_user"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <!--Texfiled-->
+            <!--TextField-->
             <EditText
-                android:inputType="text"
+                android:id="@+id/edituser"
                 android:hint="User :"
+                android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
-
         </LinearLayout>
         <!--Password-->
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <!--icon-->
             <ImageView
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_action_password"
-                android:layout_width="match_parent"
+               android:src="@drawable/ic_action_password"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <!--Texfiled-->
+            <!--TextField-->
             <EditText
-                android:inputType="text"
-                android:hint="Passwoed :"
+                android:id="@+id/editpassword"
+                android:hint="Password :"
+               android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
-
         </LinearLayout>
         <!--Buutom-->
-
+        <Button
+            android:id="@+id/btnregister"
+            android:text="@string/Register_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
