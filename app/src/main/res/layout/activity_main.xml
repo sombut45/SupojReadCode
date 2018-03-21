@@ -5,7 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="supoj.th.ac.ms.supojreadcode.MainActivity">
-
+<!--wallpaper-->
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg7"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
     <!--Content of Fragment-->
 <FrameLayout
     android:id="@+id/contentMainFragment"
