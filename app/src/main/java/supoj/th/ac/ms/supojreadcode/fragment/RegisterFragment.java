@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,8 @@ import android.widget.EditText;
 import supoj.th.ac.ms.supojreadcode.MainActivity;
 import supoj.th.ac.ms.supojreadcode.R;
 import supoj.th.ac.ms.supojreadcode.utility.MyAlert;
+import supoj.th.ac.ms.supojreadcode.utility.MyConstant;
+import supoj.th.ac.ms.supojreadcode.utility.PostUserToServer;
 
 /**
  * Created by sombut on 21/3/2561.
@@ -60,6 +63,31 @@ public class RegisterFragment extends Fragment{
 
                 } else {
 //       No  Space
+                    try {
+                        MyConstant myConstant = new MyConstant();
+                        PostUserToServer postUserToServer = new PostUserToServer(getActivity());
+                        postUserToServer.execute(nameString, userString, passString,
+                                myConstant.getUrlPostString());
+                        String ressult = postUserToServer.get();
+                        Log.d("22MarchV1", "Result =+>" + ressult);
+
+                        if (Boolean.parseBoolean(ressult)) {
+                            getActivity().getSupportFragmentManager().popBackStack();
+                            MyAlert myAlert = new MyAlert(getActivity());
+                            myAlert.myDialog("POST USER OK", "Finish");
+                        } else {
+                            MyAlert myAlert = new MyAlert(getActivity());
+                            myAlert.myDialog("Cannot Post User",
+                                    "Please Try Angin");
+
+                        }
+
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
 
 
                 }
