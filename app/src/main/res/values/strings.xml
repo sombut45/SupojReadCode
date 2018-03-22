@@ -4,5 +4,8 @@
     <string name="login_th">ลงชื่อเข้าใช้งาน</string>
     <string name="user_name">sombut</string>
     <string name="Register_ok">ตกลง</string>
-<string name="register">สมัครใช้งาน</string>
+    <string name="register">สมัครใช้งาน</string>
+
+    <string name="have_sppace">มีช่องว่าง</string>
+    <string name="messes_have_sppace">กรุุณากรอก ทุกช่องค่ะ</string>
 </resources>
